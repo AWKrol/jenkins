@@ -1,0 +1,31 @@
+---
+
+- scm:
+    name: git-ui-tests
+    scm:
+      - git:
+          url: https://github.com/AWKrol/ui_tests
+          credentials-id: jenkins
+          branches:
+            - FETCH_HEAD
+          refspec: ${REFSPEC}
+
+- scm:
+    name: git-api-tests
+    scm:
+      - git:
+          url: https://github.com/AWKrol/rest_assured_tests
+          credentials-id: jenkins
+          branches:
+            - FETCH_HEAD
+          refspec: ${REFSPEC}
+
+- scm:
+    name: git-stubs-tests
+    scm:
+      - git:
+          url: https://github.com/AWKrol/wiremock
+          credentials-id: jenkins
+          branches:
+            - FETCH_HEAD
+          refspec: ${REFSPEC}
